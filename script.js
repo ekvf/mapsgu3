@@ -221,8 +221,7 @@ function escapeHtml(text) {
 }
 
 function getRoutingMode() {
-    const el = document.querySelector('input[name="routeMode"]:checked');
-    return el ? el.value : 'auto';
+    return 'masstransit';
 }
 
 function routingModeRu(mode) {
@@ -795,7 +794,7 @@ document.getElementById('buildRoute').addEventListener('click', function () {
 
 function buildRoute(startCoords, endCoords, routingMode) {
     if (!routingMode) {
-        routingMode = 'auto';
+        routingMode = 'masstransit';
     }
 
     lastRouteReferencePoints = [startCoords, endCoords];
