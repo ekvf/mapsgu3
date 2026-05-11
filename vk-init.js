@@ -20,7 +20,14 @@
         w.document.head.appendChild(s);
     }
 
-    load("vendor/vk-bridge.min.js", function () {
+    var localVk;
+    try {
+        localVk = new URL("vendor/vk-bridge.min.js", document.baseURI).href;
+    } catch (e1) {
+        localVk = "vendor/vk-bridge.min.js";
+    }
+
+    load(localVk, function () {
         load("https://cdn.jsdelivr.net/npm/@vkontakte/vk-bridge@2.14.1/dist/browser.min.js", null);
     });
 })(window);
