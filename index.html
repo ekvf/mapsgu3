@@ -41,23 +41,9 @@
                         <option value="">Выберите корпус...</option>
                     </select>
                 </div>
-                <fieldset class="input-group route-mode-fieldset">
-                    <legend class="route-mode-legend">Как добираться (данные Яндекс.Карт)</legend>
-                    <div class="route-mode-options" role="radiogroup" aria-label="Способ перемещения">
-                        <label class="route-mode-option">
-                            <input type="radio" name="routeMode" value="pedestrian">
-                            Пешком
-                        </label>
-                        <label class="route-mode-option">
-                            <input type="radio" name="routeMode" value="masstransit">
-                            Общ. транспорт
-                        </label>
-                        <label class="route-mode-option">
-                            <input type="radio" name="routeMode" value="auto" checked>
-                            На машине
-                        </label>
-                    </div>
-                </fieldset>
+                <p class="input-group route-mode-hint" role="note">
+                    Маршрут всегда строится <strong>на общественном транспорте</strong> (автобус, троллейбус, трамвай и т.д. по данным Яндекс.Карт), независимо от расстояния.
+                </p>
                 <div id="routeSummary" class="route-summary" hidden aria-live="polite"></div>
                 <div class="button-group">
                     <button id="buildRoute" type="button">Построить маршрут</button>
